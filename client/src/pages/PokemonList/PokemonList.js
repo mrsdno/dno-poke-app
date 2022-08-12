@@ -159,8 +159,8 @@ function PokemonList(props) {
                       Types: 
                       {pokemon?.pokeTypes?.map((types) => (
                         <p key={types} style={{padding: "0px 2px"}}>{types.charAt(0).toUpperCase() + types.slice(1)}</p>
-                      ))}
-                    </ul>
+                      ))}</p>
+                    
                     <p className="description" key={pokemon.flavorText}>
                       {pokemon.flavorText}
                     </p>

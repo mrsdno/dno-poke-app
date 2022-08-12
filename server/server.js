@@ -21,9 +21,9 @@ app.use(express.static('public'));
 
 // serve up static assets - NOT needed At the moment, but will be needed when we merge the React APP with the server
 
-if(process.env.NODE_ENV === 'production'){
-    app.use(express.static(path.join(__dirname, '../client/build')));
-}
+// if(process.env.NODE_ENV === 'production'){
+//     app.use(express.static(path.join(__dirname, '../client/build')));
+// }
 
 // app.get('*', (req, res) => {
 //     res.sendFile(path.join(__dirname, '../client/build/index.html'))

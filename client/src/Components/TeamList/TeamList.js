@@ -1,13 +1,9 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
-
-import { useQuery, useMutation } from '@apollo/client'
 import { DELETE_TEAM } from "../../utils/mutations";
 import { QUERY_ME } from "../../utils/queries";
-
 import { useQuery, useMutation } from '@apollo/client'
-import { DELETE_TEAM } from "../../utils/mutations";
-import { QUERY_ME } from "../../utils/queries";
+
 
 import './style.css'
 
