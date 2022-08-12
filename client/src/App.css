@@ -1,21 +1,20 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+Inline+One&family=Noto+Serif:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mali:wght@300;400;700&display=swap');
 
 /*root variables*/
 :root{
-  --color-background: rgb(0, 0, 0);
-  --color-primary: rgb(255, 203, 5);
-  --color-primary-t: rgba(255, 205, 5, 0.774);
-  --color-secondary: rgb(53,100,174);
-  --color-third:rgb(187,26,26);
-  --color-text-1: white;
-  --color-text-2: rgb(132,14,18);
+  --black: rgba(0, 0, 0);
+  --red: rgba(204, 0, 0);
+  --blue: rgba(41, 111, 179);
+  --white: rgba(255, 255, 255);
+  --yellow:rgba(255, 203, 5);
 }
+
 *{
   text-align: center;
   margin-top: 0px;
   margin-bottom: 0px;
-  font-family: 'Noto Serif';
+font-family: 'Mali', cursive;
   
 }
 
@@ -23,124 +22,79 @@ body{
   background-color: var(--color-background);
 }
 
-/*=================containers===============*/
-/*container verticle*/
-.container-v{
-  display: flex;
-  flex-direction: column;
-  justify-content: center
-}
-/*container horizontal */
-.container-h{
-  display: flex;
-  justify-content: space-around;
+/* modern CSS reset */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
-/*=======margins=========*/
-/*margin of 5px*/
-.marg-5{
-  margin: 5px;
-}
-/*margin 10px*/
-.marg-10{
-  margin: 10px;
-}
-
-/*============button styles===========*/
-/* button styles 1 */
-
-.btn-1{
-  color: var(--color-text-1);
-  padding: 5px 10px 5px 10px;
-  background-color: var(--color-secondary);
-  border: 3px solid var(--color-secondary);
-  border-radius: 5px;
-  font-size: x-large;
-  text-shadow: 1.2px 1.2px #1d1d1b;
-  cursor: pointer;
-  box-shadow: 2px 2px 3px rgba(255, 234, 49, 0.7);
-}
-.btn-1:hover{
-  background-color: var(--color-primary-t);
-  color: black;
-  box-shadow: 2px 2px 3px rgba(53,100,174, 0.8);
-}
-/*btn 1 small*/
-.btn-1-s{
-  color: var(--color-text-1);
-  padding: 5px 10px 5px 10px;
-  margin: 5px 5px 5px 5px ;
-  background-color: var(--color-secondary);
-  border: 3px solid var(--color-secondary);
-  border-radius: 5px;
-  font-size: medium;
-  cursor: pointer;
-}
-.btn-1-s:hover{
-  background-color: var(--color-primary-t);
-  color:black;
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
 }
 
-/* button styles 2*/
-.btn-2{
-  color: var(--color-text-1);
-  padding: 5px 10px 5px 10px;
-  background-color: var(--color-secondary);
-  border: 3px solid var(--color-secondary);
-  border-radius: 5px;
-  font-size: x-large;
-  text-shadow: 1.2px 1.2px #1d1d1b;
-  cursor: pointer;
-  box-shadow: 2px 2px 3px rgba(255, 234, 49, 0.7);
-}
-.btn-2:hover{
-  background-color: var(--color-third) ;
-  color:black;
-  box-shadow: 2px 2px 3px rgba(53,100,174, 0.8);
-}
-/*btn 1 small*/
-.btn-2-s{
-  color: var(--color-text-1);
-  padding: 5px 10px 5px 10px;
-  margin: 5px 5px 5px 5px ;
-  background-color: var(--color-third);
-  border: 3px solid var(--color-third);
-  border-radius: 5px;
-  font-size: medium;
-  cursor: pointer;
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
 }
 
-.btn-2-s:hover{
-  color:black;
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
 }
 
-/*button style 3*/
-.btn-3{
-  color: var(--color-text-1);
-  padding: 5px 10px 5px 10px;
-  background-color: var(--color-primary);
-  border: 3px solid var(--color-primary);
-  border-radius: 5px;
-  margin: 10px 10px 10px 10px;
-  font-size: larger;
-  cursor: pointer;
-  text-shadow: 0px 0px;
-  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
-}
-.btn-3:hover{
-  background-color: var(--color-secondary);
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
 }
 
-/*============form styles============*/
-.form-1{
-  margin: 5px 5px 5px 5px;
-  font-size: larger;
-  padding: 5px 5px 5px 5px;
-  border-radius: 10px;
-  text-shadow: 0px 0px;
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
 }
 
-/*============text shadow=========*/
-.text-shadow{
-  text-shadow: 1.2px 1.2px #444141;
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }

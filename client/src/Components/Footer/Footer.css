@@ -1,0 +1,19 @@
+.footer {
+    background-color: var(--red);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+}
+
+.peeking-pika {
+    width: 10em;;
+    margin: 0;
+    padding-top: 0.5em; 
+    display: flex;
+}
+
+.copyright {
+    display: inline;
+    color: var(--yellow);
+    align-self: center;
+}
