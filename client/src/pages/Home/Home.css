@@ -1,0 +1,13 @@
+.wrapper {
+    margin: 20px;
+}
+
+.jumbotron {
+    background-color: var(--blue);
+    border-radius: 10px;
+    color: var(--white);
+    padding: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

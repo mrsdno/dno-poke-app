@@ -22,7 +22,8 @@
 }
 
 .pokeball {
-  width: 20vw;
+    width: 20vw;
+  max-width: 130px;
   padding-bottom: 10px;
 }
 
