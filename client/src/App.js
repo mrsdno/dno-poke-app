@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css"
-import  Header  from './components/Header'
+import  Header  from './components/Header/Header'
 import  Footer  from './components/Footer/Footer'
 import Home from "./pages/Home";
 import Login from "./pages/Login";
@@ -42,26 +42,22 @@ const client = new ApolloClient({
 function App() {
 
     return (
-        <div>
+        <div className="page-wrapper">
             <ApolloProvider client={client}>
                 <Router>
-                    <header>
                         <Header />
-                    </header>
                     <Routes>
                         <Route path="/" element={<Home />} />
                         <Route path="/login" element={<Login />} />
                         <Route path='/signup' element={<Signup />} />
-                        <Route path="/pokemonteam" forceRefresh={true} element={<PokemonTeam />} />
+                        <Route path="/pokemonteam" element={<PokemonTeam />} />
                         <Route path="/pokemonlist" element={<PokemonList />} />
                         <Route path="*" element={<ErrorPage />} />
                     </Routes>
-                    <footer>
                         <Footer />
-                    </footer>
                 </Router>
             </ApolloProvider>
-        </div>
+            </div>
     );
 }
 

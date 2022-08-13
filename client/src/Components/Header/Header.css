@@ -1,0 +1,60 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100vw;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  text-decoration: none;
+  font-size: 25px;
+  color: var(--yellow);
+  background-color: var(--blue);
+  border-radius: 10px;
+  margin: 10px;
+  letter-spacing: -0.2rem;
+  padding: 0 0.6em;
+}
+
+.pokeball {
+  width: 20vw;
+  padding-bottom: 10px;
+}
+
+button {
+  transition: all 0.5s;
+  border: none;
+  font-size: 20px;
+cursor: pointer;
+}
+
+.log-in {
+  background: none;
+  color: inherit;
+  padding: 0;
+  color: var(--yellow);
+  margin-right: 20px;
+}
+
+.log-in:hover,
+.log-in:focus {
+  color: var(--red);
+}
+
+.sign-up {
+  background-color: var(--red);
+  color: var(--yellow);
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.sign-up:hover,
+.sign-up:focus {
+  background-color: var(--black);
+  color: var(--red);
+}
