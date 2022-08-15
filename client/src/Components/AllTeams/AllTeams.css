@@ -1,5 +1,4 @@
 .slides-wrapper {
-    background-color: var(--white);
     width: 100vw;
 }
 
@@ -16,7 +15,6 @@
 .swiper-slide {
   text-align: center;
   font-size: 18px;
-  background: #fff;
 
   /* Center slide text vertically */
   display: -webkit-box;
@@ -34,13 +32,32 @@
   align-items: center;
 }
 
-.swiper-slide img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.pokemon-wrapper {
+    width: 70vw; 
+    height: 250px;
+    background-color: white;
+    border-radius: 10px;
 }
 
-.pokemon-wrapper {
-    width: 200px; 
+.pokemon-wrapper h2 {
+ text-transform: uppercase;
+ font-size: 30px;
+ color: var(--red);
 }
+
+.pokemon-wrapper h3 {
+    font-size: 20px;
+    color: var(--yellow);
+}
+
+.imgs-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.imgs-wrapper img {
+    flex: 1 0 20%;
+    max-width: 20vw;
+}
+

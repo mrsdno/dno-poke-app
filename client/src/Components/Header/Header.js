@@ -1,5 +1,4 @@
 import React from 'react'
-import '../components.css'
 import '../../App.css'
 import pokemonLogo from '../../assets/International_Pokémon_logo.svg.png'
 import { Link } from 'react-router-dom';

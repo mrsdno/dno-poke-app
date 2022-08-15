@@ -1,6 +1,5 @@
 import React from 'react'
 // import './footer.css'
-import "../components.css"
 import Hooh from '../../assets/flying-ho-oh.gif'
 import Lugia from "../../assets/flying-lugia.gif"
 import PeekingPika from "../../assets/svg/PeekingPika"

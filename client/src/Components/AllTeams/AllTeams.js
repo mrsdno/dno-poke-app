@@ -29,11 +29,12 @@ const AllTeams = ({ teams }) => {
               {teams.map((team) => (
                   <SwiperSlide>
                       <div className="pokemon-wrapper">
-                  <h2 className="team-name">{team.teamName}</h2>
+                          <h2>{team.teamName}</h2>
+                          <h3>by {team.username}</h3>
+                          <div className="imgs-wrapper">
                   {team.pokemon &&
                     team.pokemon.map((pokemon) => (
                       <div className="each-pokemon">
-                        <h2 className="pokemon-name">{pokemon.name}</h2>
                         <img
                           className="card-img-top team-image"
                           src={pokemon.image}
@@ -41,6 +42,7 @@ const AllTeams = ({ teams }) => {
                         ></img>
                       </div>
                     ))}
+                              </div>
                           </div>
                 </SwiperSlide>
               ))}
