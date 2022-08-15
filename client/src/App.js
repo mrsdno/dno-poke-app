@@ -9,6 +9,7 @@ import PokemonList from "./pages/PokemonList/PokemonList";
 import PokemonTeam from "./pages/PokemonTeam";
 import ErrorPage from "./pages/ErrorPage";
 
+
 import {
     ApolloClient,
     InMemoryCache,
