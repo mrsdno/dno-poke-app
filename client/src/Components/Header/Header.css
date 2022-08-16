@@ -30,8 +30,8 @@
 button {
   transition: all 0.5s;
   border: none;
-  font-size: 20px;
-cursor: pointer;
+  font-size: 24px;
+  cursor: pointer;
 }
 
 .log-in {

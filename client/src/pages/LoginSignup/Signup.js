@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
 import { useMutation } from '@apollo/client';
-import { ADD_USER } from '../utils/mutations';
-import '../App.css'
-
-import Auth from '../utils/auth';
+import { ADD_USER } from '../../utils/mutations';
+import './LoginSignup.css'
+import Auth from '../../utils/auth';
 
 const SignUp = () => {
     const [formState, setFormState] = useState({
@@ -41,11 +40,9 @@ const SignUp = () => {
     };
 
     return (
-        <main>
-            <div className='SignUp'>
-                <div className='card-body'>
-                    <h3 className='card-title red-text' style={{color:"white"}}>
-                        Sign Up!
+            <div className='wrapper-box'>
+                    <h3>
+                        SIGN UP. YOU WON'T REGRET IT.
                     </h3>
                     <form className='login-form' onSubmit={handleFormSubmit}>
 
@@ -97,8 +94,6 @@ const SignUp = () => {
                     {/* Gives error if signup fails */}
                     {error && <div>Signup Failed</div>}
                 </div>
-            </div>
-        </main>
 
     );
 };

@@ -3,8 +3,8 @@ import "./App.css"
 import  Header  from './components/Header/Header'
 import  Footer  from './components/Footer/Footer'
 import Home from "./pages/Home/Home";
-import Login from "./pages/Login";
-import Signup from './pages/Signup';
+import Login from "./pages/LoginSignup/Login";
+import Signup from './pages/LoginSignup/Signup';
 import PokemonList from "./pages/PokemonList/PokemonList";
 import PokemonTeam from "./pages/PokemonTeam";
 import ErrorPage from "./pages/ErrorPage";
