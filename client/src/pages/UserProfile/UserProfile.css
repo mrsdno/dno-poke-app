@@ -1,0 +1,32 @@
+.profile-wrapper {
+}
+
+.form-wrapper {
+    margin: 10px;
+    background-color: var(--blue);
+    border-radius: 10px;
+    padding: 10px;
+    height: 130px;
+}
+
+.form-wrapper h2 {
+    color: var(--yellow);
+    text-transform: uppercase;
+}
+
+.search-team-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;;
+}
+
+.search-team-form input {
+    width: 65%;
+}
+
+.search-team-form button {
+    width: 20%;
+    background-color: var(--blue);
+    height: 50px;
+}
+

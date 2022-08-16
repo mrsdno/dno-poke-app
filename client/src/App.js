@@ -6,7 +6,7 @@ import Home from "./pages/Home/Home";
 import Login from "./pages/LoginSignup/Login";
 import Signup from './pages/LoginSignup/Signup';
 import PokemonList from "./pages/PokemonList/PokemonList";
-import PokemonTeam from "./pages/PokemonTeam";
+import UserProfile from "./pages/UserProfile/UserProfile";
 import ErrorPage from "./pages/ErrorPage";
 
 
@@ -51,7 +51,7 @@ function App() {
                         <Route path="/" element={<Home />} />
                         <Route path="/login" element={<Login />} />
                         <Route path='/signup' element={<Signup />} />
-                        <Route path="/pokemonteam" element={<PokemonTeam />} />
+                        <Route path="/userprofile" element={<UserProfile />} />
                         <Route path="/pokemonlist" element={<PokemonList />} />
                         <Route path="*" element={<ErrorPage />} />
                     </Routes>

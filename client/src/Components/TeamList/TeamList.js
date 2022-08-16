@@ -25,7 +25,7 @@ const TeamList = ({ teams }) => {
       console.log(deletedTeam.data);
 
       if (deletedTeam.data) {
-        navigate('/pokemonteam', { replace: true })
+        navigate('/userprofile', { replace: true })
       }
 
     } catch (e){

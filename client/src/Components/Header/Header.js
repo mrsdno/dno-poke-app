@@ -30,7 +30,7 @@ const Header = () => {
         <nav className="justify-content-end">
           {Auth.loggedIn() ? (
             <div className="buttons">
-              <Link to="/pokemonteam">
+              <Link to="/userprofile">
                 <button className="btn-1">My Profile</button>
               </Link>
               <a href="/" onClick={logout}>

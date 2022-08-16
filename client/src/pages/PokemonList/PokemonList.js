@@ -167,7 +167,7 @@ function PokemonList(props) {
                   </div>
                 </div>
                   <Link
-                    to="/pokemonteam"
+                    to="/userprofile"
                   >
                     <button
                       onClick={() => {
