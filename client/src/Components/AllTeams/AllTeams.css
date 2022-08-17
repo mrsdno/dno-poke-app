@@ -1,5 +1,5 @@
 .slides-wrapper {
-    width: 100vw;
+    width: 90vw;
 }
 
 .swiper {
@@ -9,12 +9,13 @@
 
 .swiper-wrapper {
     width: 100%;
-    height: 100%;
+    padding: 20px 0;
 }
 
 .swiper-slide {
   text-align: center;
   font-size: 18px;
+  margin-bottom: 40px;
 
   /* Center slide text vertically */
   display: -webkit-box;
@@ -30,6 +31,11 @@
   -ms-flex-align: center;
   -webkit-align-items: center;
   align-items: center;
+}
+
+
+.swiper-pagination-bullet {
+    background: var(--yellow) !important;
 }
 
 .pokemon-wrapper {
@@ -61,3 +67,8 @@
     max-width: 20vw;
 }
 
+.choose-pokemon-btn {
+    font-size: 16px;
+    padding: 0 5px;
+    margin-bottom: 10px;
+}

@@ -3,7 +3,7 @@ import React, {useEffect, useState} from 'react';
 import { useQuery, useMutation } from "@apollo/client";
 import { ADD_TEAM } from '../../utils/mutations';
 import { QUERY_ME, QUERY_TEAMS } from "../../utils/queries";
-import UserTeams from '../../components/UserTeams/UserTeams'
+import AllTeams from '../../components/AllTeams/AllTeams'
 import './UserProfile.css';
 import { Link } from 'react-router-dom';
 
@@ -134,12 +134,12 @@ function UserProfile() {
       )}
 
       <div className="user-teams-wrapper">
-        {teams && <UserTeams teams={teams.teams} />}
+        {teams && <AllTeams teams={teams.teams} />}
       </div>
 
-      <Link to="/">
+      {/* <Link to="/">
         <button className="btn-3">All other Teams</button>
-      </Link>
+      </Link> */}
     </div>
   );
 }

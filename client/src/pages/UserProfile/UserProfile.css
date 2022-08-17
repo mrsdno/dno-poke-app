@@ -1,4 +1,7 @@
-.profile-wrapper {
+.user-teams-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
 }
 
 .form-wrapper {

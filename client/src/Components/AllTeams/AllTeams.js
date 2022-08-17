@@ -1,7 +1,7 @@
-import React, {useRef} from "react";
+import React, { useRef } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import "./AllTeams.css";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination} from "swiper";
 import "swiper/css/bundle";
 
 const AllTeams = ({ teams }) => {
@@ -9,7 +9,23 @@ const AllTeams = ({ teams }) => {
     return <p className="no-teams">Where did all the teams go?</p>;
   }
 
+  console.log(window.location.pathname);
+
   console.log(teams);
+
+  function addPokemon(team) {
+    if (window.location.pathname == "/userprofile") {
+      if (team.pokemon.length < 6) {
+        return (
+          <Link to={"/pokemonlist"} state={{ teamIdArray: team._id }}>
+            <button className="choose-pokemon-btn">Choose Your Pokémon</button>
+          </Link>
+        );
+      } else {
+        return (<div>This team is full.</div> )
+      }
+    }
+}
 
     return (
       <>
@@ -17,12 +33,8 @@ const AllTeams = ({ teams }) => {
           {teams.length > 0 ? (
             <Swiper
               slidesPerView={1}
-              spaceBetween={100}
+              spaceBetween={0}
               centeredSlides={true}
-              pagination={{
-                clickable: true,
-              }}
-              modules={[Pagination]}
               className="mySwiper"
             >
               {teams.map((team) => (
@@ -41,7 +53,8 @@ const AllTeams = ({ teams }) => {
                         ></img>
                       </div>
                     ))}
-                              </div>
+                    </div>
+                    {addPokemon(team)}
                           </div>
                 </SwiperSlide>
               ))}
