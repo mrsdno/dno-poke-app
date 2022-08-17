@@ -79,3 +79,47 @@
   }
 }
 /* pokeball loading */
+
+/* page styling */
+
+.pokemonCard {
+  background-color: var(--white);
+  border-radius: 10px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.pokemonCard h2 {
+  text-transform: uppercase;
+  color: var(--red);
+}
+
+.card-wrapper img {
+  display: inline;
+  text-align: center;
+}
+
+.text-wrapper ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.add-pokemon-btn {
+  font-size: 14px;
+  margin: 10px;
+}
+
+select {
+  height: 40px;
+  background-color: var(--blue);
+  border: none;
+  color: var(--white);
+  border-radius: 10px; 
+}
+
+

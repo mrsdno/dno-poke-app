@@ -2,7 +2,10 @@ import React, { useRef } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "./AllTeams.css";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Scrollbar } from "swiper";
 import "swiper/css/bundle";
+import "swiper/css/scrollbar";
+
 
 const AllTeams = ({ teams }) => {
   if (!teams.length) {
@@ -32,30 +35,32 @@ const AllTeams = ({ teams }) => {
         <div class="slides-wrapper">
           {teams.length > 0 ? (
             <Swiper
+              modules={[Scrollbar]}
               slidesPerView={1}
               spaceBetween={0}
+              scrollbar={{ draggable: true }}
               centeredSlides={true}
               className="mySwiper"
             >
               {teams.map((team) => (
-                  <SwiperSlide>
-                      <div className="pokemon-wrapper">
-                          <h2>{team.teamName}</h2>
-                          <h3>by {team.username}</h3>
-                          <div className="imgs-wrapper">
-                  {team.pokemon &&
-                    team.pokemon.map((pokemon) => (
-                      <div className="each-pokemon">
-                        <img
-                          className="card-img-top team-image"
-                          src={pokemon.image}
-                          alt="Card1"
-                        ></img>
-                      </div>
-                    ))}
+                <SwiperSlide>
+                  <div className="pokemon-wrapper">
+                    <h2>{team.teamName}</h2>
+                    <h3>by {team.username}</h3>
+                    <div className="imgs-wrapper">
+                      {team.pokemon &&
+                        team.pokemon.map((pokemon) => (
+                          <div className="each-pokemon">
+                            <img
+                              className="card-img-top team-image"
+                              src={pokemon.image}
+                              alt="Card1"
+                            ></img>
+                          </div>
+                        ))}
                     </div>
                     {addPokemon(team)}
-                          </div>
+                  </div>
                 </SwiperSlide>
               ))}
             </Swiper>
@@ -68,23 +73,3 @@ const AllTeams = ({ teams }) => {
 };
 
 export default AllTeams;
-/*
-          {
-            teams.map((team) => (
-              <SwiperSlide>
-                <h2 className="team-name">{team.teamName}</h2>
-                {team.pokemon &&
-                  team.pokemon.map((pokemon) => (
-                    <div className="each-pokemon">
-                      <h2 className="pokemon-name">{pokemon.name}</h2>
-                      <img
-                        className="card-img-top team-image"
-                        src={pokemon.image}
-                        alt="Card1"
-                      ></img>
-                    </div>
-                  ))}
-              </SwiperSlide>
-            ));
-          }
-          */

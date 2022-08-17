@@ -39,16 +39,21 @@
 }
 
 .pokemon-wrapper {
+    min-height: 270px;
     width: 70vw; 
-    height: 250px;
     background-color: white;
     border-radius: 10px;
+ display: flex;
+ flex-direction: column;
+ justify-content: space-around;
 }
+
 
 .pokemon-wrapper h2 {
  text-transform: uppercase;
  font-size: 30px;
  color: var(--red);
+
 }
 
 .pokemon-wrapper h3 {
@@ -70,5 +75,12 @@
 .choose-pokemon-btn {
     font-size: 16px;
     padding: 0 5px;
-    margin-bottom: 10px;
+    display: block;
+    margin: auto;
+}
+
+@media only screen and (min-width: 400px) {
+.swiper-scrollbar {
+    background: var(--red) !important;
+}
 }

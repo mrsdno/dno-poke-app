@@ -4,11 +4,8 @@ import { useQuery, useMutation } from "@apollo/client";
 import { ADD_POKEMON } from "../../utils/mutations";
 import { useLocation } from "react-router-dom";
 import { Link } from "react-router-dom";
-import "./style.css";
+import "./PokemonList.css";
 import { QUERY_ME, QUERY_TEAMS } from "../../utils/queries";
-
-
-
 
 function PokemonList(props) {
   const [pokemonList, setPokemonList] = useState("");
@@ -132,7 +129,7 @@ function PokemonList(props) {
               if (queryName === "") {
                 return pokemon;
               } else if (
-                pokemon.name.toUpperCase().includes(queryName.toUpperCase())
+                pokemon?.name?.includes(queryName)
               ) {
                 return pokemon;
               }
@@ -141,25 +138,25 @@ function PokemonList(props) {
               if (queryColor === "") {
                 return pokemon;
               } else if (
-                pokemon.color.toUpperCase().includes(queryColor.toUpperCase())
+                pokemon?.color?.includes(queryColor)
               ) {
                 return pokemon;
               }
             })
             .map((pokemon) => (
               <div className="pokemonCard" key={pokemon.id}>
-                <h1 key={pokemon.name}>{pokemon.name}</h1>
+                <h2 key={pokemon.name}>{pokemon.name}</h2>
                 <div className="card-wrapper">
                   <img key={pokemon.img} src={pokemon.image} />
                   <div className="text-wrapper">
                     <p key={pokemon.height}>Height: {pokemon.height} inches</p>
                     <p key={pokemon.weight}>Weight: {pokemon.weight} lbs</p>
-                    <p key={pokemon.color}>Color: {pokemon.color.charAt(0).toUpperCase() + pokemon.color.slice(1)}</p>
-                    <p style={{display: "flex",justifyContent: "space-between"}}>
-                      Types: 
+                    <p key={pokemon.color}>Color: {pokemon.color}</p>
+                    <ul>
+                      Type(s): 
                       {pokemon?.pokeTypes?.map((types) => (
-                        <p key={types} style={{padding: "0px 2px"}}>{types.charAt(0).toUpperCase() + types.slice(1)}</p>
-                      ))}</p>
+                        <li>{types.replace(",", "")}</li>
+                      ))}</ul>
                     
                     <p className="description" key={pokemon.flavorText}>
                       {pokemon.flavorText}
@@ -169,7 +166,7 @@ function PokemonList(props) {
                   <Link
                     to="/userprofile"
                   >
-                    <button
+                    <button className="add-pokemon-btn"
                       onClick={() => {
                         handleAddPokemon(
                           pokemon.name,
