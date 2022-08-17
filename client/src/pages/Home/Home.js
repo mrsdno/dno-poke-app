@@ -6,6 +6,7 @@ import AllTeams from "../../components/AllTeams/AllTeams";
 import Auth from "../../utils/auth";
 import { useQuery } from "@apollo/client";
 import { QUERY_TEAMS } from "../../utils/queries";
+import PokemonLogo from "../../assets/svg/PokemonLogo"
 import "./Home.css";
 
 function Home() {
@@ -16,7 +17,10 @@ function Home() {
   return (
     <div className="wrapper">
       <div className="jumbotron">
-        <h2>BUILD YOUR BEST POKEMON TEAM.</h2>
+        <h2>
+          BUILD YOUR BEST <div className="bottom-line"> <PokemonLogo />
+          TEAM.</div>
+        </h2>
       </div>
       <div className="home">
         {loading ? (

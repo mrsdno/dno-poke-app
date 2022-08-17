@@ -125,13 +125,14 @@ function UserProfile() {
             </svg>
           </button>
         </form>
+        <div class="break"></div>
+        {/* error message if teamName is empty */}
+        {errorMessage && (
+          <div className="error-message">
+            <p>{errorMessage}</p>
+          </div>
+        )}
       </div>
-      {/* error message if teamName is empty */}
-      {errorMessage && (
-        <div>
-          <p>{errorMessage}</p>
-        </div>
-      )}
 
       <div className="user-teams-wrapper">
         {teams && <AllTeams teams={teams.teams} />}

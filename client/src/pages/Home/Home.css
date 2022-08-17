@@ -11,3 +11,11 @@
     align-items: center;
     justify-content: center;
 }
+
+.bottom-line {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    justify-content: center;
+    height: 50px;
+}
