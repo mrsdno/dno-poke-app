@@ -1,0 +1,29 @@
+.swiper-wrapper {
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.user-pokemon-wrapper {
+    background-color: var(--white);
+    display: flex;
+}
+
+.user-pokemon-wrapper h2 {
+    font-size: 14px;
+}
+
+.pokemon-team-wrapper {
+    display: flex;
+}
+
+.pokemon-name {
+    font-size: 10px;
+}
+
+.choose-pokemon button {
+    font-size: 14px;
+}
+
+.swiper-slide-wrapper {
+    background-color: white;
+}

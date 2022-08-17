@@ -1,7 +1,6 @@
 import React, {useRef} from "react";
 import "./AllTeams.css";
 import { Swiper, SwiperSlide } from "swiper/react";
-
 import { Pagination} from "swiper";
 import "swiper/css/bundle";
 
