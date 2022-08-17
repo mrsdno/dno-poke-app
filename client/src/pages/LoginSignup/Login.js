@@ -42,7 +42,7 @@ const Login = (props) => {
     });
 
     // redirect user to homepage
-    this.props.history.push("/").catch((err) => {
+    this.props.history.push("/userprofile").catch((err) => {
       console.log(err);
     });
   };

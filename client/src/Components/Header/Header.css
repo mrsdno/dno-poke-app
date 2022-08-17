@@ -32,6 +32,7 @@ button {
   border: none;
   font-size: 24px;
   cursor: pointer;
+  margin: 0 5px;
 }
 
 .log-in {
