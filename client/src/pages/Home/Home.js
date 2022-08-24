@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 // importing pages
-import AllTeams from "../../components/AllTeams/AllTeams";
+import AllTeams from "../../Components/AllTeams/AllTeams";
 import Auth from "../../utils/auth";
 import { useQuery } from "@apollo/client";
 import { QUERY_TEAMS } from "../../utils/queries";
